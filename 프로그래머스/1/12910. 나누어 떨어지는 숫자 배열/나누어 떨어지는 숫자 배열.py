@@ -1,5 +1,6 @@
 def solution(arr, divisor):
     answer = []
+    arr.sort()
     for i in arr:
         if i % divisor == 0:
             answer.append(i)
@@ -7,5 +8,4 @@ def solution(arr, divisor):
         answer.append(-1)
         return answer
     else:
-        answer_sorted = list(sorted(answer))
-        return answer_sorted
+        return answer
