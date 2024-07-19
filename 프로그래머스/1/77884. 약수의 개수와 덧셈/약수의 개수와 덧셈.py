@@ -15,6 +15,3 @@ def solution(a, b):
         else:
             result -= n
     return result
-
-
-print(solution(13, 17))
