@@ -6,7 +6,7 @@ def make_matrix():
         matrix.append(row)
     return matrix
 
-# 행려을 세로로 읽게 만들기
+# 행렬을 세로로 읽게 만들기
 def read_column(matrix):
     for j in range(15):
         for i in range(5):
