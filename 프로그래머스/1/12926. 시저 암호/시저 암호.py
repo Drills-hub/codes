@@ -23,7 +23,7 @@ def solution(s, n):
         # 빈칸도 아스키 코드로 변환 되기때문에
         if i == " ":
             cc.append(" ")
-        # 아스키 코드 안에서 대문자를 출력하기 위해
+        # 아스키 코드 안에서 소문자를 출력하기 위해
         else:
             i_num = ord(i)
             if 123 > i_num > 96:
@@ -34,7 +34,7 @@ def solution(s, n):
                 else:
                     cc_word = chr(i_num + n)
                     cc.append(cc_word)
-            # 아스키 코드 안에서 소문자를 출력하기 위해
+            # 아스키 코드 안에서 대문자를 출력하기 위해
             elif 91 > i_num > 64:
                 if i_num + n > 90:
                     j = (i_num + n) - 90
