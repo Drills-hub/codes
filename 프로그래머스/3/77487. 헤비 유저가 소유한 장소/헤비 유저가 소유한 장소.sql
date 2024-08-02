@@ -5,4 +5,4 @@ FROM PLACES P JOIN(
                     GROUP BY 1
                     HAVING COUNT(HOST_ID) >= 2
                     ) PS ON P.HOST_ID = PS.HOST_ID
-ORDER BY 1
+ORDER BY 1;
