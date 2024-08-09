@@ -13,14 +13,14 @@ def solution(s):
     idx = {}
 
     for i, j in enumerate(s):
+        #알파벳이 이미 인덱스에 있다면
         if j in idx:
             dif = i - idx[j] + 1
             answer.append(dif)
             idx[j] = i + 1
+        #알파벳이 처음 나왔다면
         else:
             answer.append(-1)
             idx[j] = i + 1
-
-
 
     return answer
