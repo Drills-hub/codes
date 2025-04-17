@@ -1,13 +1,11 @@
 num = int(input())
 
-constructors = []
-for M in range(num, 0, -1):
-    sum_of_digits = sum(int(i) for i in str(M))
-    constructor = M + sum_of_digits
-    if constructor == num:
-        constructors.append(M)
+start = max(1, num - 9 * len(str(num)))
 
-if not constructors:
-    print(0)
-else:
-    print(min(constructors))
+result = 0
+for M in range(start, num):
+    if M + sum(int(i) for i in str(M)) == num:
+        result = M
+        break
+
+print(result)
