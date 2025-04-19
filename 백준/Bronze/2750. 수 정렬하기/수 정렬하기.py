@@ -1,10 +1,6 @@
-N = int(input())
-answer = []
+import sys
 
-for _ in range(N):
-    n = int(input())
-    answer.append(n)
-
+N = int(sys.stdin.readline())
+answer = [int(sys.stdin.readline()) for _ in range(N)]
 answer.sort()
-for i in answer:
-    print(i)
+sys.stdout.write('\n'.join(map(str, answer)) + '\n')
