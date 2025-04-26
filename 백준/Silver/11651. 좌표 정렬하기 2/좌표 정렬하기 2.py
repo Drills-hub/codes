@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+print = sys.stdout.write
 n = int(input())
 
 result = []
@@ -8,4 +11,4 @@ for _ in range(n):
 result.sort()
 
 for i in result:
-    print(i[1],i[0])
+    print(f"{i[1]} {i[0]}"+"\n")
