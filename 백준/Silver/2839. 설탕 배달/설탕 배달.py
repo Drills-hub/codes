@@ -1,25 +1,15 @@
 import sys
-input=sys.stdin.readline
+input = sys.stdin.readline
 
 N = int(input())
+answer = -1
 
-answer=[]
+for x in range(N//3 + 1):
+    rest = N - 3*x
+    if rest % 5 == 0:
+        y = rest // 5
+        total = x + y
+        if answer == -1 or total < answer:
+            answer = total
 
-if N%3==0:
-    m=N//3
-    answer.append(m)
-if N%5==0:
-    m=N//5
-    answer.append(m)
-
-for x in range(N//3+1):
-    for y in range(N//5+1):
-        if 3*x+5*y==N:
-            answer.append(x+y)
-
-if answer:
-    print(min(answer))
-else:
-    print(-1)
-    
-    
+print(answer)
