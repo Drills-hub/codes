@@ -1,22 +1,21 @@
-import sys
+def loop(L, R):
 
-input = sys.stdin.readline
+    total_length = 0
+    branch_length = L
+    count = 0
+    
+    while True:
+        branch_length = int(branch_length * (R / 100))
+        count += 1
+        num_branches = 2 ** count
+        if branch_length <= 5:
+            break
+        
+        total_length += branch_length * num_branches
+        
+    return total_length
 
 L = int(input())
 R = int(input())
-
-total_branch_length = 0
-current_length = L
-num_branches = 2
-
-while True:
-    next_length = int(current_length * R / 100)
-    if next_length <= 5:
-        break
-
-    total_branch_length += num_branches * next_length
-
-    current_length = next_length
-    num_branches *= 2
-
-print(total_branch_length)
+result = loop(L, R)
+print(result)
