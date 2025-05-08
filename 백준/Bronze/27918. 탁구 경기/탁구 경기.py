@@ -1,7 +1,10 @@
+import sys
+input = sys.stdin.readline
+
 N = int(input())
 x,y = 0,0
 while N > 0:
-    winner = input()
+    winner = input().strip()
     if winner == "D":
         x += 1
     elif winner == "P":
