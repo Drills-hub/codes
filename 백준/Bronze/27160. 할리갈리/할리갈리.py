@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 n = int(input())
 
 HalliGalli = {"STRAWBERRY": 0, "BANANA": 0, "LIME": 0, "PLUM": 0}
