@@ -1,5 +1,7 @@
 import sys
+
 input = sys.stdin.readline
+print = sys.stdout.write
 
 num_list = []
 n = int(input())
@@ -7,5 +9,4 @@ n = int(input())
 for _ in range(n):
     num_list.append(int(input()))
 num_list.sort()
-for num in num_list:
-    print(num)
+print('\n'.join(map(str, num_list)))
