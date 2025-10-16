@@ -1,11 +1,6 @@
 def solution(s):
-    s_list = s.lower().split(" ")
-    JadenCase = []
-    
-    for word in s_list:
-        if word:  
-            JadenCase.append(word[0].upper() + word[1:])
-        else:
-            JadenCase.append("")
+    answer = s.split(' ')
+    for i in range(len(answer)):
+        answer[i] = answer[i].capitalize()
+    return " ".join(answer)
 
-    return " ".join(JadenCase)
