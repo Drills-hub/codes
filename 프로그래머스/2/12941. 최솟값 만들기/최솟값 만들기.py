@@ -1,9 +1,9 @@
-def solution(A, B):
+def solution(A,B):
     answer = 0
-    A = sorted(A)      
-    B = sorted(B, reverse=True)  
-
-    while A and B:
-        answer += A.pop(0) * B.pop(0)  
-
+    A.sort()
+    B.sort(reverse=True)
+    
+    for i in range(len(A)):
+        answer+= A[i]*B[i]
+        
     return answer
