@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 def solution(num: int) :
     a=num//3
     b=num//7
